@@ -11,8 +11,6 @@ import path from "path";
 import tailwindcss from "tailwindcss";
 import autoprefixer from "autoprefixer";
 import { themes } from "prism-react-renderer";
-import lightCodeTheme from "./src/css/prism-theme.js";
-import darkCodeTheme from themes.dracula;
 
 const companyWebsiteUrl = process.env.COMPANY_WEBSITE_URL ?? "https://permit.io";
 
