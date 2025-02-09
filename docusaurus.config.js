@@ -8,9 +8,9 @@
 // });
 
 const path = require("path");
-
+const {themes} = require('prism-react-renderer');
 const lightCodeTheme = require("./src/css/prism-theme");
-const darkCodeTheme = require("prism-react-renderer/themes/dracula");
+const darkCodeTheme = themes.dracula;;
 
 const companyWebsiteUrl = process.env.COMPANY_WEBSITE_URL || "https://permit.io";
 
@@ -614,7 +614,7 @@ const config = {
         ],
       },
       prism: {
-        theme: require("prism-react-renderer/themes/dracula"),
+        theme: themes.dracula,
         additionalLanguages: ["java", "ruby", "csharp", "groovy", "go", "hcl", "php"],
       },
       colorMode: {
