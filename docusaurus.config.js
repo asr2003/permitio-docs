@@ -11,7 +11,10 @@ import path from "path";
 import tailwindcss from "tailwindcss";
 import autoprefixer from "autoprefixer";
 import { themes } from "prism-react-renderer";
+import lightCodeTheme from "./src/css/prism-theme.js";
+const darkCodeTheme = themes.dracula;
 
+console.log("COMPANY_WEBSITE_URL:", process.env.COMPANY_WEBSITE_URL);
 const companyWebsiteUrl = process.env.COMPANY_WEBSITE_URL ?? "https://permit.io";
 
 const apiReferenceUrl = process.env.API_REFERENCE_URL ?? "https://api.permit.io/v2/redoc";
