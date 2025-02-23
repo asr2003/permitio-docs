@@ -25,7 +25,7 @@ jobs:
         run: npx playwright install --with-deps chromium
 
       - name: Build the website
-        run: npm docusaurus build
+        run: npm run build
 
       - name: Take screenshots with Playwright
         run: npx playwright test
