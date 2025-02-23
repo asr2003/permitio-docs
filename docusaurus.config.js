@@ -42,13 +42,6 @@ const config = {
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
           routeBasePath: "/",
-          lastVersion: "current",
-          versions: {
-            current: {
-              label: "2.0.0",
-              path: "/",
-            },
-          },
         },
         blog: false, // disables docusaurus blog
         theme: {
