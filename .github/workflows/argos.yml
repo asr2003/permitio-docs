@@ -22,13 +22,13 @@ jobs:
         run: npm install
 
       - name: Install Playwright browsers
-        run: npm playwright install --with-deps chromium
+        run: npx playwright install --with-deps chromium
 
       - name: Build the website
         run: npm docusaurus build
 
       - name: Take screenshots with Playwright
-        run: npm playwright test
+        run: npx playwright test
 
       - name: Upload screenshots to Argos
         env:
