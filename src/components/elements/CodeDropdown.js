@@ -5,7 +5,6 @@ import anime from "animejs/lib/anime.es.js";
 import ReactMarkdown from "react-markdown";
 import { CodeBlock, tomorrowNightBlue } from "react-code-blocks";
 import "./CodeDropdown.scss";
-import { render } from "react-dom";
 
 export default function CodeDropdown(props) {
 	const [isOpen, setOpen] = useState(props.open);
