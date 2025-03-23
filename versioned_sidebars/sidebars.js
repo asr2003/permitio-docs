@@ -391,7 +391,7 @@ const sidebars = {
                 },
                 {
                   type: "doc",
-                  id: "docs/sdk/nodejs/resource/delete-resource",
+                  id: "sdk/nodejs/resource/delete-resource",
                   label: "deleteResource",
                 },
               ],
