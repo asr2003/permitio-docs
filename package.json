@@ -16,7 +16,8 @@
     "lint": "eslint --ignore-path .gitignore .",
     "format": "prettier --ignore-path .gitignore --write \"**/*.{ts,tsx,css,scss,js,mdx}\"",
     "hyperlink": "hyperlink  ./build --check-anchors  --sources ./docs",
-    "redirect-lint": "node checkRedirects"
+    "redirect-lint": "node checkRedirects",
+    "postinstall": "patch-package"
   },
   "dependencies": {
     "@docusaurus/core": "^3.5.0",
