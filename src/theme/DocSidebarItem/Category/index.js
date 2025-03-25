@@ -7,15 +7,14 @@ import {
   Collapsible,
   useCollapsible,
 } from '@docusaurus/theme-common';
-import {
-  findFirstCategoryLink,
-  isSamePath,
-} from '@docusaurus/theme-common/internal';
-import { isActiveSidebarItem, useDocSidebarItemsExpandedState } from '@docusaurus/plugin-content-docs/client';
+import { isSamePath } from '@docusaurus/theme-common/internal';
+import { findFirstSidebarItemLink }from "@docusaurus/plugin-content-docs/client";
+import { useDocSidebarItemsExpandedState } from '@docusaurus/plugin-content-docs/client';
 import Link from '@docusaurus/Link';
 import {translate} from '@docusaurus/Translate';
 import useIsBrowser from '@docusaurus/useIsBrowser';
 import DocSidebarItems from '@theme/DocSidebarItems';
+import { isActiveSidebarItem } from '@docusaurus/plugin-content-docs/client';
 // If we navigate to a category and it becomes active, it should automatically
 // expand itself
 function useAutoExpandActiveCategory({isActive, collapsed, updateCollapsed}) {
@@ -42,11 +41,11 @@ function useCategoryHrefWithSSRFallback(item) {
       return item.href;
     }
     // In these cases, it's not necessary to render a fallback
-    // We skip the "findFirstCategoryLink" computation
+    // We skip the "findFirstSidebarItemLink" computation
     if (isBrowser || !item.collapsible) {
       return undefined;
     }
-    return findFirstCategoryLink(item);
+    return findFirstSidebarItemLink(item);
   }, [item, isBrowser]);
 }
 function CollapseButton({categoryLabel, onClick}) {
